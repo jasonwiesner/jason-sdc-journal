@@ -26,7 +26,7 @@
     - [Nginx Microcaching](#Nginx-Microcaching)
         - [Nginx Configs](#Nginx-Configs)
         - [Post Nginx Microcaching Results](#Post-Nginx-Microcaching-Results)
-    - [All Loader.io Test Results](All-Loader.io-Test-Results)
+    - [All Loader.io Test Results](All-Loader-io-Test-Results)
 
 
 ## Phase 1: Scale the Database
@@ -975,7 +975,7 @@ Implemented Nginx microcaching in order to decrease amount of database & network
 
 ![10,000 RPS](10krps64ms.png)
 
-#Goal Accomplished
+# Goal Accomplished
 
 ### All Loader.io Test Results
 
