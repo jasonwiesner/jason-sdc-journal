@@ -906,14 +906,66 @@ Deployed remote MongoDB instance and seeded with all records:
 
 ## Phase 4: Scale the Service and Proxy
 
-### Add Nginx
 
-Added Nginx as load balancer witha microcaching strategy in order to decrease the amount of database and overall network calls. This increased performance dramatically:
+### Add Nginx As Load Balancer & Duplicate App Server
 
-#### Post Nginx with microcaching
+Added Nginx as a load balancer. I will now document performance improvement as I add app servers.
 
-10,000rps, 0.1% error rate, 64ms latency - - Goal Accomplished - -
+Current rps: 400.
+
+#### Added Second Server
+
+Adding second server took rps from 400 to 750.
+
+#### Added Third Server
+
+Adding third server took rps from 750 to 1,000.
+
+#### Added Fourth Server
+
+Adding fourth server took rps from 1,000 to 1,500.
+
+#### Implemented Redis Caching For All Servers
+
+Implementing Redis caching took rps from 1,500 to 2,750.
+
+### Implemented Nginx Microcaching
+
+Implemented Nginx microcaching in order to decrease amount of database & network calls. This increased performance dramatically:
+
+#### Nginx Configs:
+
+proxy_cache_path /path/to/cach levels=1:2 keys_zone=micro_cache:1s max_size=10g inactive=60m use_temp_path=off;
+
+upstream balances {
+	#keep_alive;
+	server server1_ip_address;
+	server server2_ip_address;
+	server server3_ip_address;
+	server server4_ip_address;
+}
+
+server {
+	listen 80;
+	listen [::]:80;
+	server_name http://localhost;
+	proxy_cache micro_cache
+
+	location / {
+		proxy_cache micro_cache;
+		proxy_cache_valid any 1s;
+		proxy_cache use_stale;
+		proxy_cache background_update;
+		proxy_pass http://balancees
+	}
+}
+
+#### Post Nginx Microcaching Results
+
+10,000rps, 0.1% error rate, 64ms latency - - Goal Accomplished! - -
 
 ![10,000 RPS](10krps64ms.png)
+
+### Loader.io Test results:
 
 https://docs.google.com/document/d/1WyrrQAev9G9keqhnc3yk6gbyuxmEsbZ0dk0uief2EUw/edit?usp=sharing
