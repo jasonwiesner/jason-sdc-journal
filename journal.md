@@ -12,7 +12,13 @@
     - [Pre-Redis-Results](#Pre-Redis-Results)
     - [Post-Redis-Results](#Post-Redis-Results)
 3. [Phase 3: Deploy the Service and Proxy](#Phase-3-Deploy-the-Service-and-Proxy)
+    - [Deploying Service & Proxy through EC2 Ubuntu Instances](#Deploying-Service-&-Proxy-through-EC2-Ubuntu-Instances)
+    - [DBMS Server Deployment](#DBMS-Server-Deployment)
+        - [Set Up Server](#Set-Up-Server)
+        - [Configure Security](#Configure-Security)
+    - [Create & Seed DB/Collections](Create-&-Seed-DB/Collections)
 4. [Phase 4: Scale the Service and Proxy](#Phase-4-Scale-the-Service-and-Proxy)
+    - [Add Nginx](#Add-Nginx)
 
 ## Phase 1: Scale the Database
 
@@ -780,9 +786,9 @@ module.exports =  {
 
 ## Phase 3: Deploy the Service and Proxy
 
-Deployed both service and proxy through EC2 t2.micro instances as in FEC:
+### Deploying Service & Proxy through EC2 Ubuntu Instances:
 
-* Congfigure and launch EC2 instance in AWS
+* Configure and launch EC2 instance in AWS
 
 * Connect to instance through SSH:
 
@@ -835,7 +841,7 @@ Deployed both service and proxy through EC2 t2.micro instances as in FEC:
 
 Deployed remote MongoDB instance and seeded with all records:
 
-**Set Up Server**
+#### Set Up Server
 
 * Install official, most up to date MongoDB repo:
 
@@ -855,7 +861,7 @@ Deployed remote MongoDB instance and seeded with all records:
 
 * Ensure Mongod restarts automatically at boot: sudo systemctl enable mongod
 
-**Configure Security**
+#### Configure Security
 
 * Add administrative user:
 
@@ -890,7 +896,7 @@ Deployed remote MongoDB instance and seeded with all records:
 
   * Verify mongod is Active: sudo systemctl status mongod
 
-**Create & Seed db/collections**
+### Create & Seed DB/Collections
 
 * Create reservation_service collection and set Admin privilages
 
@@ -900,4 +906,7 @@ Deployed remote MongoDB instance and seeded with all records:
 
 ## Phase 4: Scale the Service and Proxy
 
-**Add Nginx to service as load balancer**
+### Add Nginx
+
+Added Nginx as load balancer witha microcaching strategy in order to decrease the amount of database and overall network calls. This increased performance dramatically:
+
