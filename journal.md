@@ -197,7 +197,7 @@ Query: `EXPLAIN ANALYZE
 
 Results:
 
-  QUERY PLAN:
+#### QUERY PLAN:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Gather  (cost=1000.00..136417.85 rows=1 width=32) (actual time=727.822..808.605 rows=1 loops=1)
    Workers Planned: 2
@@ -217,7 +217,7 @@ Query: `EXPLAIN ANALYZE
 
 Results:
 
-QUERY PLAN:
+#### QUERY PLAN:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Gather  (cost=1000.00..136417.85 rows=1 width=32) (actual time=818.507..819.749 rows=1 loops=1)
    Workers Planned: 2
@@ -239,7 +239,7 @@ Query: `EXPLAIN ANALYZE
 
 Results:
 
-QUERY PLAN:
+#### QUERY PLAN:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Gather  (cost=1000.00..874257.20 rows=92 width=46) (actual time=11805.976..11807.188 rows=6 loops=1)
    Workers Planned: 2
@@ -259,7 +259,7 @@ Query: `EXPLAIN ANALYZE
 
 Results:
 
-  QUERY PLAN:
+#### QUERY PLAN:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Gather  (cost=1000.00..874257.20 rows=92 width=46) (actual time=4399.989..4401.154 rows=6 loops=1)
    Workers Planned: 2
@@ -292,7 +292,8 @@ Query: `EXPLAIN ANALYZE
 	      SELECT * FROM listingitems WHERE id=9000000;`
 
 Results:
-QUERY PLAN:
+
+#### QUERY PLAN:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Index Scan using bookings_listingid_index on bookings  (cost=0.56..10.17 rows=92 width=46) (actual time=0.019..0.021 rows=6 loops=1)
    Index Cond: (listingid = 8500000)
@@ -307,7 +308,8 @@ Query: `EXPLAIN ANALYZE
 	      SELECT * FROM listingitems WHERE id=10000000;`
 
 Results:
-QUERY PLAN:
+
+#### QUERY PLAN:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Index Scan using listingitems_id_index on listingitems  (cost=0.43..8.45 rows=1 width=32) (actual time=5.625..5.628 rows=1 loops=1)
    Index Cond: (id = 10000000)
@@ -326,7 +328,8 @@ Query: `EXPLAIN ANALYZE
 	      SELECT * FROM bookings WHERE listingId=8500000;`
 
 Results:
-QUERY PLAN:
+
+#### QUERY PLAN:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Index Scan using bookings_listingid_index on bookings  (cost=0.56..10.17 rows=92 width=46) (actual time=1.442..1.447 rows=6 loops=1)
    Index Cond: (listingid = 8500000)
@@ -341,7 +344,8 @@ Query: `EXPLAIN ANALYZE
 	      SELECT * FROM bookings WHERE listingId=10000000;`
 
 Results:
-QUERY PLAN:
+
+#### QUERY PLAN:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Index Scan using bookings_listingid_index on bookings  (cost=0.56..10.17 rows=92 width=46) (actual time=0.024..0.028 rows=6 loops=1)
    Index Cond: (listingid = 10000000)
