@@ -935,30 +935,30 @@ Implemented Nginx microcaching in order to decrease amount of database & network
 
 #### Nginx Configs:
 
-proxy_cache_path /path/to/cach levels=1:2 keys_zone=micro_cache:1s max_size=10g inactive=60m use_temp_path=off;
+  proxy_cache_path /path/to/cach levels=1:2 keys_zone=micro_cache:1s max_size=10g inactive=60m use_temp_path=off;
 
-upstream balances {
-	#keep_alive;
-	server server1_ip_address;
-	server server2_ip_address;
-	server server3_ip_address;
-	server server4_ip_address;
-}
+  upstream balances {
+    #keep_alive;
+    server server1_ip_address;
+    server server2_ip_address;
+    server server3_ip_address;
+    server server4_ip_address;
+  }
 
-server {
-	listen 80;
-	listen [::]:80;
-	server_name http://localhost;
-	proxy_cache micro_cache
+  server {
+    listen 80;
+    listen [::]:80;
+    server_name http://localhost;
+    proxy_cache micro_cache
 
-	location / {
-		proxy_cache micro_cache;
-		proxy_cache_valid any 1s;
-		proxy_cache use_stale;
-		proxy_cache background_update;
-		proxy_pass http://balancees
-	}
-}
+    location / {
+      proxy_cache micro_cache;
+      proxy_cache_valid any 1s;
+      proxy_cache use_stale;
+      proxy_cache background_update;
+      proxy_pass http://balancees
+    }
+  }
 
 #### Post Nginx Microcaching Results
 
