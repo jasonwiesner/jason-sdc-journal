@@ -12,8 +12,8 @@
     - [Pre-Redis-Results](#Pre-Redis-Results)
     - [Post-Redis-Results](#Post-Redis-Results)
 3. [Phase 3: Deploy the Service and Proxy](#Phase-3-Deploy-the-Service-and-Proxy)
-    - [Deploying Service & Proxy through EC2 Ubuntu Instances](#Deploying-Service-&-Proxy-through-EC2-Ubuntu-Instances)
-    - [Remote MongoDB Server Deployment](#RemoteMongoDB-Server-Deployment)
+    - [Deploying Service and Proxy through EC2 Ubuntu Instances](#Deploying-Service-and-Proxy-through-EC2-Ubuntu-Instances)
+    - [Remote MongoDB Server Deployment](#Remote-MongoDB-Server-Deployment)
         - [Set Up Server](#Set-Up-Server)
         - [Configure Security](#Configure-Security)
     - [Create & Seed DB/Collections](Create-&-Seed-DB/Collections)
@@ -786,7 +786,7 @@ module.exports =  {
 
 ## Phase 3: Deploy the Service and Proxy
 
-### Deploying Service & Proxy through EC2 Ubuntu Instances:
+### Deploying Service and Proxy through EC2 Ubuntu Instances:
 
 * Configure and launch EC2 instance in AWS
 
