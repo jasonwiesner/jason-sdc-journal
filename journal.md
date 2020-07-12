@@ -16,7 +16,7 @@
     - [Remote MongoDB Server Deployment](#Remote-MongoDB-Server-Deployment)
         - [Set Up Server](#Set-Up-Server)
         - [Configure Security](#Configure-Security)
-    - [Create and Seed DB and Collections](Create-and-Seed-DB and Collections)
+    - [Create and Seed DB and Collections](Create-and-Seed-DB-and-Collections)
 4. [Phase 4: Scale the Service and Proxy](#Phase-4-Scale-the-Service-and-Proxy)
     - [Add Nginx](#Add-Nginx)
 
