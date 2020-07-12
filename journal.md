@@ -981,7 +981,7 @@ Implemented Nginx microcaching in order to decrease amount of database & network
 
 #### Post Nginx Microcaching Results
 
-### Goal Accomplished:
+##### Goal Accomplished:
 
 10,000rps, 0.1% error rate, 64ms latency
 
