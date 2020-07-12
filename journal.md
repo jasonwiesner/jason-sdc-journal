@@ -18,7 +18,16 @@
         - [Configure Security](#Configure-Security)
     - [Create and Seed DB and Collections](#Create-and-Seed-DB-and-Collections)
 4. [Phase 4: Scale the Service and Proxy](#Phase-4-Scale-the-Service-and-Proxy)
-    - [Add Nginx](#Add-Nginx)
+    - [Add Nginx As Load Balancer and Duplicate App Server](#Add-Nginx-As-Load-Balancer-and-Duplicate-App-Server)
+        - [Second Server](#Second-Server)
+        - [Third Server](#Third-Server)
+        - [Fourth Server](#Fourth-Server)
+        - [Implement Redis Caching For All Servers](#Implement-Redis-Caching-For-All-Servers)
+    - [Nginx Microcaching](#Nginx-Microcaching)
+        - [Nginx Configs](#Nginx-Configs)
+        - [Post Nginx Microcaching Results](#Post-Nginx-Microcaching-Results)
+    - [All Loader.io Test Results](All-Loader.io-Test-Results)
+
 
 ## Phase 1: Scale the Database
 
@@ -907,29 +916,29 @@ Deployed remote MongoDB instance and seeded with all records:
 ## Phase 4: Scale the Service and Proxy
 
 
-### Add Nginx As Load Balancer & Duplicate App Server
+### Add Nginx As Load Balancer and Duplicate App Server
 
 Added Nginx as a load balancer. I will now document performance improvement as I add app servers.
 
 Current rps: 400.
 
-#### Added Second Server
+#### Second Server
 
 Adding second server took rps from 400 to 750.
 
-#### Added Third Server
+#### Third Server
 
 Adding third server took rps from 750 to 1,000.
 
-#### Added Fourth Server
+#### Fourth Server
 
 Adding fourth server took rps from 1,000 to 1,500.
 
-#### Implemented Redis Caching For All Servers
+#### Implement Redis Caching For All Servers
 
 Implementing Redis caching took rps from 1,500 to 2,750.
 
-### Implemented Nginx Microcaching
+### Nginx Microcaching
 
 Implemented Nginx microcaching in order to decrease amount of database & network calls. This increased performance dramatically:
 
@@ -966,6 +975,6 @@ Implemented Nginx microcaching in order to decrease amount of database & network
 
 ![10,000 RPS](10krps64ms.png)
 
-### Loader.io Test results:
+### All Loader.io Test Results
 
 https://docs.google.com/document/d/1WyrrQAev9G9keqhnc3yk6gbyuxmEsbZ0dk0uief2EUw/edit?usp=sharing
