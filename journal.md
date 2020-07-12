@@ -363,7 +363,7 @@ Results:
 
 ## Phase 2: Measure Initial Performance
 
-///////////////////////////// TEST CONFIGs /////////////////////////////
+## TEST CONFIGs
 
 config:
   target: 'http://localhost:3001'
@@ -412,7 +412,7 @@ scenarios:
 
 
 
-///////////////////////////// HELPER FUNCTION /////////////////////////////
+## HELPER FUNCTION
 
 let listingId = 9500000;
 let pricePerNight = 100;
@@ -442,9 +442,9 @@ module.exports =  {
 
 //// RAN ARTILLERY TESTS USING COMMAND "artillery run -o reportName.json artilleryTest.yml" ////
 
-///////////////////////////// PRE-REDIS RESULTS /////////////////////////////
+## PRE-REDIS RESULTS
 
-####getListingInfo:
+#### getListingInfo:
 
 "aggregate": {
     "timestamp": "2020-05-30T01:26:12.130Z",
@@ -508,7 +508,7 @@ module.exports =  {
     ]
   }
 
-  ####updateListingInfo:
+  #### updateListingInfo:
 
   "aggregate": {
     "timestamp": "2020-05-30T01:45:18.202Z",
@@ -573,7 +573,7 @@ module.exports =  {
     ]
   }
 
-  ####getBookedDates:
+  #### getBookedDates:
 
   "aggregate": {
     "timestamp": "2020-05-30T02:21:13.239Z",
@@ -637,9 +637,9 @@ module.exports =  {
     ]
   }
 
-///////////////////////////// POST-REDIS RESULTS /////////////////////////////
+## POST-REDIS RESULTS
 
-####getListingInfo:
+#### getListingInfo:
 
 "aggregate": {
     "timestamp": "2020-05-31T02:14:58.807Z",
@@ -706,7 +706,7 @@ module.exports =  {
     ]
   }
 
-####getBookedDates:
+#### getBookedDates:
 
 "aggregate": {
     "timestamp": "2020-05-31T02:32:03.608Z",
