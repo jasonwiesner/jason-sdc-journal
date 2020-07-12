@@ -16,7 +16,7 @@
     - [Remote MongoDB Server Deployment](#Remote-MongoDB-Server-Deployment)
         - [Set Up Server](#Set-Up-Server)
         - [Configure Security](#Configure-Security)
-    - [Create & Seed DB/Collections](Create-&-Seed-DB/Collections)
+    - [Create and Seed DB/Collections](Create-and-Seed-DB/Collections)
 4. [Phase 4: Scale the Service and Proxy](#Phase-4-Scale-the-Service-and-Proxy)
     - [Add Nginx](#Add-Nginx)
 
@@ -896,7 +896,7 @@ Deployed remote MongoDB instance and seeded with all records:
 
   * Verify mongod is Active: sudo systemctl status mongod
 
-### Create & Seed DB/Collections
+### Create and Seed DB/Collections
 
 * Create reservation_service collection and set Admin privilages
 
