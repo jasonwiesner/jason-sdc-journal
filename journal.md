@@ -987,6 +987,6 @@ Implemented Nginx microcaching in order to decrease amount of database & network
 
 ![10,000 rps](NginxCaching10krps.png)
 
-### All Loader IO Test Results
+### All Loader IO Test Results:
 
 https://docs.google.com/document/d/1WyrrQAev9G9keqhnc3yk6gbyuxmEsbZ0dk0uief2EUw/edit?usp=sharing
