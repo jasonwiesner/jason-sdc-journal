@@ -361,7 +361,7 @@ Results:
 
 ===================================================================================
 
-## Phase 2 Measure Initial Performance
+## Phase 2: Measure Initial Performance
 
 ## TEST CONFIGs
 
