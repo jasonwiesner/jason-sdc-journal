@@ -971,9 +971,11 @@ Implemented Nginx microcaching in order to decrease amount of database & network
 
 #### Post Nginx Microcaching Results
 
-10,000rps, 0.1% error rate, 64ms latency - - Goal Accomplished! - -
+10,000rps, 0.1% error rate, 64ms latency
 
 ![10,000 RPS](10krps64ms.png)
+
+#Goal Accomplished
 
 ### All Loader.io Test Results
 
