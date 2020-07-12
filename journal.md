@@ -26,7 +26,7 @@
     - [Nginx Microcaching](#Nginx-Microcaching)
         - [Nginx Configs](#Nginx-Configs)
         - [Post Nginx Microcaching Results](#Post-Nginx-Microcaching-Results)
-    - [All Loader.io Test Results](All-Loader.io-Test-Results)
+    - [All Loader.io Test Results](#All-Loader.io-Test-Results)
 
 
 ## Phase 1: Scale the Database
