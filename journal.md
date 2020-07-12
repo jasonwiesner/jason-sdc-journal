@@ -13,7 +13,7 @@
     - [Post-Redis-Results](#Post-Redis-Results)
 3. [Phase 3: Deploy the Service and Proxy](#Phase-3-Deploy-the-Service-and-Proxy)
     - [Deploying Service & Proxy through EC2 Ubuntu Instances](#Deploying-Service-&-Proxy-through-EC2-Ubuntu-Instances)
-    - [DBMS Server Deployment](#DBMS-Server-Deployment)
+    - [Remote MongoDB Server Deployment](#RemoteMongoDB-Server-Deployment)
         - [Set Up Server](#Set-Up-Server)
         - [Configure Security](#Configure-Security)
     - [Create & Seed DB/Collections](Create-&-Seed-DB/Collections)
@@ -26,11 +26,11 @@
 > I created PUT and DELETE routes in order to make my api truly RESTful. The PUT route allows changes to be made to any listingId and the DELETE route allows for the specified listingId to be deleted.
 
 ### DBMS Selection and Data Generation
-> I will create and seed two db's, Postgres and MongoDB. I will then determine which db to use based on what makes sense for my use case.
-> I believe using csv as opposed to json would be more efficient.
+> I will create and seed two db's, PostgreSQL and MongoDB. I will then test each to determine which db to use.
+> Creating CSV files is optimal for my specific use case as I can seed both databases with the same files once they are created.
 
 #### Postgres
-As I already have MySQL experience, I will use Postgres as my SQL DBMS.
+I will use Postgres as my SQL DBMS.
 
 #### MongoDB
 I will use MongoDB as my NoSQL Database.
@@ -837,7 +837,7 @@ module.exports =  {
 
 * Start the instance via pm2 inside Ubuntu: pm2 start sdcService.config.js
 
-### DBMS Server Deployment
+### Remote MongoDB Server Deployment
 
 Deployed remote MongoDB instance and seeded with all records:
 
