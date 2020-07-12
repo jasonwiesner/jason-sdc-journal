@@ -197,7 +197,7 @@ Query: `EXPLAIN ANALYZE
 
 ### Results:
 
-                                        QUERY PLAN:
+  QUERY PLAN:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Gather  (cost=1000.00..136417.85 rows=1 width=32) (actual time=727.822..808.605 rows=1 loops=1)
    Workers Planned: 2
