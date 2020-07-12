@@ -985,7 +985,7 @@ Implemented Nginx microcaching in order to decrease amount of database & network
 
 10,000rps, 0.1% error rate, 64ms latency
 
-![10,000 rps](10krps64ms.png)
+![10,000 rps](NginxCaching10krps.png)
 
 ### All Loader IO Test Results
 
