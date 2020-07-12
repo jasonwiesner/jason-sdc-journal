@@ -5,9 +5,9 @@
   - [Support CRUD from your API](#Support-CRUD-from-your-API)
   - [Selection and Data Generation](#DBMS-Selection-and-Data-Generation)
   - [DBMS Benchmarking](#DBMS-Benchmarking)
-2. [Phase 2: Measure Initial Performance](#Phase-2:-Measure-Initial-Performance)
-3. [Phase 3: Deploy the Service and Proxy](#Phase-3:-Deploy-the-Service-and-Proxy)
-4. [Phase 4: Scale the Service and Proxy](#Phase-3:-Scale-the-Service-and-Proxy)
+1. [Phase 2: Measure Initial Performance](#Phase-2-:-Measure-Initial-Performance)
+1. [Phase 3: Deploy the Service and Proxy](#Phase-3:-Deploy-the-Service-and-Proxy)
+1. [Phase 4: Scale the Service and Proxy](#Phase-3:-Scale-the-Service-and-Proxy)
 
 ## Phase 1: Scale the Database
 
