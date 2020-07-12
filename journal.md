@@ -195,7 +195,7 @@ Test 1 - “Initial Test”:
 Query: `EXPLAIN ANALYZE
 	      SELECT * FROM listingitems WHERE id=9000000;`
 
-### Results:
+Results:
 
   QUERY PLAN:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -238,6 +238,7 @@ Query: `EXPLAIN ANALYZE
 	      SELECT * FROM bookings WHERE listingId=8500000;`
 
 Results:
+
 QUERY PLAN:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Gather  (cost=1000.00..874257.20 rows=92 width=46) (actual time=11805.976..11807.188 rows=6 loops=1)
@@ -257,7 +258,8 @@ Query: `EXPLAIN ANALYZE
 	      SELECT * FROM bookings WHERE listingId=10000000;`
 
 Results:
-QUERY PLAN:
+
+  QUERY PLAN:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Gather  (cost=1000.00..874257.20 rows=92 width=46) (actual time=4399.989..4401.154 rows=6 loops=1)
    Workers Planned: 2
