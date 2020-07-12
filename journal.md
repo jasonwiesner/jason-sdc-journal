@@ -922,21 +922,31 @@ Added Nginx as a load balancer. I will now document performance improvement as I
 
 Current rps: 400.
 
+![400 rps](1Server400rps.png)
+
 #### Second Server
 
 Adding second server took rps from 400 to 750.
+
+![750 rps](2servers750rps.png)
 
 #### Third Server
 
 Adding third server took rps from 750 to 1,000.
 
+![1,000 rps](3servers1krps.png)
+
 #### Fourth Server
 
 Adding fourth server took rps from 1,000 to 1,500.
 
+![1,400 rps](4servers1.5krps.png)
+
 #### Implement Redis Caching For All Servers
 
 Implementing Redis caching took rps from 1,500 to 2,750.
+
+![2,750 rps](redisCaching2.5krps.png)
 
 ### Nginx Microcaching
 
@@ -971,11 +981,11 @@ Implemented Nginx microcaching in order to decrease amount of database & network
 
 #### Post Nginx Microcaching Results
 
+### Goal Accomplished
+
 10,000rps, 0.1% error rate, 64ms latency
 
-![10,000 RPS](10krps64ms.png)
-
-## Goal Accomplished
+![10,000 rps](10krps64ms.png)
 
 ### All Loader IO Test Results
 
