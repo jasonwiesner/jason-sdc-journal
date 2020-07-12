@@ -910,3 +910,10 @@ Deployed remote MongoDB instance and seeded with all records:
 
 Added Nginx as load balancer witha microcaching strategy in order to decrease the amount of database and overall network calls. This increased performance dramatically:
 
+#### Post Nginx with microcaching
+
+10,000rps, 0.1% error rate, 64ms latency - - Goal Accomplished - -
+
+![10,000 RPS](10krps64ms.png)
+
+https://docs.google.com/document/d/1WyrrQAev9G9keqhnc3yk6gbyuxmEsbZ0dk0uief2EUw/edit?usp=sharing
