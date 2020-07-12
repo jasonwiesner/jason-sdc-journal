@@ -386,24 +386,24 @@ config:
 
 
 scenarios:
-  # - name: 'GET listingInfo'
-  #   flow:
-  #     - function: 'artilleryContext'
-  #     - get:
-  #         url: '/listingInfo?listingId={{ listingId }}'
-    # - name: 'PUT listingInfo'
-    #   flow:
-    #     - function: 'artilleryContext'
-    #     - put:
-    #         url: '/listingInfo'
-    #         json:
-    #           id: "{{ listingId }}"
-    #           listingId: "{{ listingId }}"
-    #           pricePerNight: "{{ pricePerNight }}"
-    #           weeked: "{{ weekend }}"
-    #           weekendPrice: "{{ weekendPrice }}"
-    #           maxGuests: "{{ maxGuests }}"
-    #           tax: "{{ tax }}"
+   - name: 'GET listingInfo'
+     flow:
+       - function: 'artilleryContext'
+       - get:
+           url: '/listingInfo?listingId={{ listingId }}'
+     - name: 'PUT listingInfo'
+       flow:
+         - function: 'artilleryContext'
+         - put:
+             url: '/listingInfo'
+             json:
+               id: "{{ listingId }}"
+               listingId: "{{ listingId }}"
+               pricePerNight: "{{ pricePerNight }}"
+               weeked: "{{ weekend }}"
+               weekendPrice: "{{ weekendPrice }}"
+               maxGuests: "{{ maxGuests }}"
+               tax: "{{ tax }}"
       - name: 'GET getBookedDates'
         flow:
           - function: 'artilleryContext'
