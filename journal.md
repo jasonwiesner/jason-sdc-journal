@@ -6,6 +6,10 @@
   - [Selection and Data Generation](#DBMS-Selection-and-Data-Generation)
   - [DBMS Benchmarking](#DBMS-Benchmarking)
 1. [Phase 2: Measure Initial Performance](#Phase-2-Measure-Initial-Performance)
+  - [Test Configs](#Test-Configs)
+  - [Helper Function](#Helper-Function)
+  - [Pre--Redis-Results](#Pre--Redis-Results)
+  - [Post-Redis-Results](#Post-Redis-Results)
 1. [Phase 3: Deploy the Service and Proxy](#Phase-3-Deploy-the-Service-and-Proxy)
 1. [Phase 4: Scale the Service and Proxy](#Phase-4-Scale-the-Service-and-Proxy)
 
@@ -363,7 +367,7 @@ Results:
 
 ## Phase 2: Measure Initial Performance
 
-## TEST CONFIGs
+## Test Configs
 
 config:
   target: 'http://localhost:3001'
@@ -412,7 +416,7 @@ scenarios:
 
 
 
-## HELPER FUNCTION
+## Helper Function
 
 let listingId = 9500000;
 let pricePerNight = 100;
@@ -442,7 +446,7 @@ module.exports =  {
 
 //// RAN ARTILLERY TESTS USING COMMAND "artillery run -o reportName.json artilleryTest.yml" ////
 
-## PRE-REDIS RESULTS
+## Pre-Redis Results
 
 #### getListingInfo:
 
@@ -637,7 +641,7 @@ module.exports =  {
     ]
   }
 
-## POST-REDIS RESULTS
+## Post-Redis Results
 
 #### getListingInfo:
 
