@@ -1,5 +1,4 @@
 # jason-sdc-journal
-Scaled, SOA Airbnb Reservations Microservice Journal
 
 ## Table of Contents
 
